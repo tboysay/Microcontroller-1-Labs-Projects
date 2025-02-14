@@ -17,11 +17,9 @@ resetVector:
     
 PSECT start, class=CODE, reloc=2
 start:
-    movlw 8 ; puts 8 in WREG
-    movf 15h, W ; copies WREG into location 15h
+    movlw 00010001B ; puts 8 in WREG
+    movf 16h, W ; copies WREG into location 16h
 loop:
     bra loop
     end 
-
-
 
