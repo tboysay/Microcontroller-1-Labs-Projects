@@ -18,9 +18,12 @@ resetVector:
 PSECT start, class=CODE, reloc=2
 start:
     movlw 8 
-    movf 15h, W 
-    addlw 11
+    movwf 15h
+    movlw 5
+    movwf 16h
     movf 15h, W
+    addwf 16h, 16h
 loop:
     bra loop
     end 
+
